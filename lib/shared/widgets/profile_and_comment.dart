@@ -1,4 +1,4 @@
-import 'package:figma_flutter_app/account_page.dart';
+import 'package:figma_flutter_app/features/account/presentation/screens/account_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfileAndComment extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'posts.dart';
-import 'menu.dart';
+import '../../../shared/widgets/posts.dart';
+import '../widgets/menu.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget{
-  final VoidCallback toggleTheme;
-  const HomePage({super.key, required this.toggleTheme});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,10 @@ class HomePage extends StatelessWidget{
               Icons.alternate_email,
               size: 48,
             ),
-            onPressed: toggleTheme,
+            onPressed: () {
+              Get.changeTheme(
+                  Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+            },
           ),
         ),
       ),

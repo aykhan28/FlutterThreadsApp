@@ -14,7 +14,6 @@ class Posts extends StatelessWidget {
           _imageSection(context),
           const ProfileAndComment(ppName: 'profil2.jpg', username: 'hrveyc', comment: 'this would be a ✨ privacy nightmare. ✨',),
           _commentOperationsSection(context),
-          Divider(),
         ],)
     );
   }
@@ -32,7 +31,7 @@ class Posts extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const PostOperation(),
-                  Text('3 likes', style: Theme.of(context).textTheme.bodySmall),
+                  Text('3 likes', style: Theme.of(context).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold)),
                 ],
               ),
             )
